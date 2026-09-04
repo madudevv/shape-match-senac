@@ -12,7 +12,7 @@ altura = 500
 tela = pygame.display.set_mode((largura, altura))
 
 #nome da janela
-pygame.display.set_caption("Shape Match")
+pygame.display.set_caption("Shape Match") #janela
 
 fonte = pygame.font.SysFont("Arial", 38)
 fonte_texto = pygame.font.SysFont("Arial", 18)
@@ -215,7 +215,7 @@ while True:
 
             x = x + 90 #movendo forma
 
-        if pygame.time.get_ticks() - tempo_inicio >= 4000:
+        if pygame.time.get_ticks() - tempo_inicio >= 2000:
             tela_atual = "jogador"
 
     elif tela_atual == "jogador":
@@ -281,7 +281,7 @@ while True:
     elif tela_atual == "acertou":
 
         informacoes = fonte_texto.render(
-            f"Rodada: {rodada}   Pontos: {pontos}   Vidas: {'♥' * vidas}",
+            f"Rodada: {rodada}   Pontos: {pontos}   Vidas: {'<3' * vidas}",
             True,
             estilos.BRANCO
         )
